@@ -17,3 +17,16 @@ if __name__ == "__main__":
     bloque
     
     """
+    nombres = ["Ana", "Maria", "Paula"]
+    for nombre in nombres:
+        print("Hola", nombre)
+
+    p1 = Persona("Ana", 25)
+    p2 = Persona("Luis", 30)
+    p3 = Persona("Marta", 45)
+
+    personas = []
+    personas.append(p1)
+    personas.append(p2)
+    personas.append(p3)
+    
