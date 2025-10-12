@@ -23,8 +23,9 @@ def menu_principal(productos):
         print("2. Listar todos los productos")
         print("3. Actualizar datos producto")
         print("4. Eliminar producto")
+        print("5. Salir")
 
-        opcion = input("Elige que deseas hacer: (1-5)")
+        opcion = input("Elige que deseas hacer:")
 
         if opcion == "1":
             crear_producto(productos)
