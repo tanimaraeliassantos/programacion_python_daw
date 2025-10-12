@@ -1,38 +1,11 @@
-from ejemplo import Persona
+from producto import Producto
 
-if __name__ == "__main__":
-    print("Hola!")
-    nombre = input("Nombre: ")
-    edad = input("Edad: ")
+productos = []
 
-    nueva = Persona(nombre, edad)
-    print(Persona.id)
-    nueva2 = Persona(nombre, edad)
-    print(nueva2.nombre)
+p1 = Producto("Portatil Acer Gaming Nitro V 15\"", 649, 00, 8)
+p2 = Producto("Portatil Acer Aspire Go 15 AG15", 479, 00, 10)
+p3 = Producto("Portatil Lenovo IdeaPad Slim 3", 349, 00, 20)
 
-    """
-    Para 
-    comentarios
-    en
-    bloque
-    
-    """
-    nombres = ["Ana", "Maria", "Paula"]
-    for nombre in nombres:
-        print("Hola", nombre)
-
-    p1 = Persona("Ana", 25)
-    p2 = Persona("Luis", 30)
-    p3 = Persona("Marta", 45)
-
-    personas = []
-    personas.append(p1)
-    personas.append(p2)
-    personas.append(p3)
-
-    for per in personas:
-        per.saludar()
-
-    edad = p1.edad
-    if edad == 25:
-        print(f"{p1.nombre} tiene {edad} años")
+productos.append(p1)
+productos.append(p2)
+productos.append(p3)
