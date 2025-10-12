@@ -29,4 +29,10 @@ if __name__ == "__main__":
     personas.append(p1)
     personas.append(p2)
     personas.append(p3)
-    
+
+    for per in personas:
+        per.saludar()
+
+    edad = p1.edad
+    if edad == 25:
+        print(f"{p1.nombre} tiene {edad} años")
