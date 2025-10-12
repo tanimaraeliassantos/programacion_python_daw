@@ -1,10 +1,10 @@
-#Variables correctas
+# Variables correctas
 nombre = "Ana"
 edad = 25
 altura = 1.75
 es_estudiante = True
 
-#Variables incorrectas
+# Variables incorrectas
 # 1variable = 5
 # mi-variable = 7
 # class="Python"
@@ -14,13 +14,13 @@ print(edad)
 print(altura)
 es_estudiante = True
 
-#Asignación múltiple
+# Asignación múltiple
 x, y, z = 10, "Hola", True
 print(x)
 print(y)
 print(z)
 
-Aritméticos
+# Aritméticos
 a, b = 10, 3
 print(a + b)   # 13  (suma)
 print(a - b)   # 7   (resta)
