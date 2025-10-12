@@ -70,3 +70,22 @@ def actualizar_productos(productos):
 
     if not producto_encontrado_actualizado:
         print("Producto no encontrado")
+
+
+def eliminar_producto(productos):
+    try:
+        id_eliminar = int(input("Introduce el ID del producto a eliminar: "))
+    except ValueError:
+        print("ID inválido.")
+        return
+
+    producto_eliminado = False
+
+    for producto in productos:
+        if producto.id == id_eliminar and not producto_eliminado:
+            productos.remove(producto)
+            print(f"Producto con ID {id_eliminar} eliminado.")
+            producto_eliminado = True
+
+    if not producto_eliminado:
+        print(f"Producto con ID {id_eliminar} no eliminado.")
