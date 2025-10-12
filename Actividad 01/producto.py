@@ -38,3 +38,35 @@ def listar_productos(productos):
 
     for producto in productos:
         print(producto)
+
+
+def actualizar_productos(productos):
+    id_actualizar = int(input("Introduce el ID a actualizar: "))
+
+    producto_encontrado_actualizado = False
+
+    for producto in productos:
+        if producto.id == id_actualizar and not producto_encontrado_actualizado:
+
+            # Cambiar nombre del producto
+            nuevo_nombre = input(
+                f"Nuevo nombre: (dejalo en blanco para no cambiar nada)")
+            if nuevo_nombre:
+                producto.nombre = nuevo_nombre
+
+            # Cambiar cantidad en inventario
+            nueva_cantidad = int(
+                input(f"Nueva cantidad: (dejalo en blanco para no cambiar nada)"))
+            if nueva_cantidad:
+                producto.cantidad = nueva_cantidad
+                producto_encontrado_actualizado = True
+
+            # Cambiar precio del producto
+            nuevo_precio = float(
+                input(f"Nuevo precio: (dejalo en blanco para no cambiar nada)"))
+            if nuevo_precio:
+                producto.precio = nuevo_precio
+                producto_encontrado_actualizado = True
+
+    if not producto_encontrado_actualizado:
+        print("Producto no encontrado")
