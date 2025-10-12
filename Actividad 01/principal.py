@@ -1,4 +1,4 @@
-from producto import Producto, crear_producto, listar_productos, actualizar_productos
+from producto import Producto, crear_producto, listar_productos, actualizar_productos, eliminar_producto
 # List vacía para almacenar productos
 productos = []
 
@@ -22,6 +22,7 @@ def menu_principal(productos):
         print("1. Crear nuevo producto")
         print("2. Listar todos los productos")
         print("3. Actualizar datos producto")
+        print("4. Eliminar producto")
 
         opcion = input("Elige que deseas hacer: (1-5)")
 
@@ -33,6 +34,9 @@ def menu_principal(productos):
 
         elif opcion == "3":
             actualizar_productos(productos)
+
+        elif opcion == "4":
+            eliminar_producto(productos)
 
         elif opcion == "5":
             print("Gestor de productos finalizado.")
