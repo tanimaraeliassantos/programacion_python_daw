@@ -6,4 +6,14 @@ if __name__ == "__main__":
     edad = input("Edad: ")
 
     nueva = Persona(nombre, edad)
-    print(nueva)
+    print(Persona.id)
+    nueva2 = Persona(nombre, edad)
+    print(nueva2.nombre)
+
+    """
+    Para 
+    comentarios
+    en
+    bloque
+    
+    """
