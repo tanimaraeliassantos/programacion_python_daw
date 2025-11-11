@@ -1,0 +1,16 @@
+<html>
+	<body>
+		<h1>{{titulo}}</h1>
+		<p><a href="{% url 'crear_producto' %}">+ Añadir producto</a></p>
+		<ul>
+			{% for p in productos %}
+			<li>
+				<a href="{% url 'detalle_producto' p.id %}">{{p.nombre}}</a> -
+				{{p.precio}} €
+			</li>
+			{% empty %}
+			<li>No hay productos disponibles.</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
