@@ -42,7 +42,7 @@ def libro_editar(request, pk):
     return render(request, 'libros/libro_formulario.html', context)
 
 
-def libro_eliminar(request, pk):
+def eliminar_libro(request, pk):
 
     libro = get_object_or_404(Libro, pk=pk)
     if request.method == "POST":
@@ -50,4 +50,4 @@ def libro_eliminar(request, pk):
         return redirect('libro_lista')
 
     context = {'libro': libro}
-    return render(request, 'libros/libro_confirm_delete.html', context)
+    return render(request, 'libros/eliminar_libro.html', context)
