@@ -1,0 +1,19 @@
+{ % extends 'base.html' %} { % block title %} Detalle: {{libro.titulo}} {%
+endblock %} {% block content %}
+
+<h1>{{libro.titulo}}</h1>
+<p><strong>Autor: </strong>{{libro.autor}}</p>
+<p><strong>Páginas: </strong>{{libro.paginas}}</p>
+<p><strong>Publicación: </strong>{{libro.fecha_publicacion|default: "N/A"}}</p>
+<p>
+	<strong>Disponibilidad: </strong>{% if libro.disponible %} Disponible{% else
+	%} No Disponible{%endif %}
+</p>
+<p>Creado el: {{libro.creado|date: "Y-m-d H:i"}}</p>
+
+<div class="nav">
+	<a href="{% url 'libro_detalle' pk=libro.pk%}">Editar</a> |
+	<a href="{% url 'eliminar_libro' pk=libro.pk%}"> Eliminar</a> |
+	<a href="{%url 'libro_lista' %}"> <- Volver a la lista</a>
+</div>
+{% endblock %}

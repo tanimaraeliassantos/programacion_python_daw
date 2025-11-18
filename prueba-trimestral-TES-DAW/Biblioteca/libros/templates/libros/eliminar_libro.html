@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block title %}Confirmar Eliminación{% endblock %}
+{% block content %}
+<h2>¿Estás seguro de eliminar este libro?</h2>
+
+<p>
+	La eliminación de "{{ libro.titulo }}" es una acción permanente y no se puede
+	deshacer.
+</p>
+
+<h3>Detalles del Libro:</h3>
+<ul>
+	<li><strong>Título:</strong> {{ libro.titulo }}</li>
+	<li><strong>Autor:</strong> {{ libro.autor }}</li>
+	<li><strong>Páginas:</strong> {{ libro.paginas }}</li>
+</ul>
+
+<form method="POST">
+	{% csrf_token %}
+
+	<button type="submit">Sí, Eliminar Permanentemente</button>
+
+	<a href="{% url 'libro_detalle' pk=libro.pk %}"> Cancelar </a>
+</form>
+
+<hr />
+<a href="{% url 'libro_lista' %}"> Volver a la Lista de Libros</a>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Catálogo de Libros{% endblock %} {%
+block content %}
+<h2>Catálogo de Libros</h2>
+
+{% if libros %}
+<table>
+	<thead>
+		<tr>
+			<th style="padding: 10px">Título</th>
+			<th style="padding: 10px">Autor</th>
+			<th style="padding: 10px">Páginas</th>
+			<th style="padding: 10px">Disponible</th>
+			<th style="padding: 10px">Acciones</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for libro in libros %}
+		<tr>
+			<td>
+				<a href="{% url 'libro_detalle' pk=libro.pk %}"
+					><strong>{{ libro.titulo }}</strong></a
+				>
+			</td>
+			<td>{{ libro.autor }}</td>
+			<td>{{ libro.paginas }}</td>
+			<td>{% if libro.disponible %} Sí {% else %} No {% endif %}</td>
+			<td>
+				<a href="{% url 'libro_formulario' pk=libro.pk %}">Editar</a> |
+				<a href="{% url 'eliminar_libro' pk=libro.pk %}">Eliminar</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% else %}
+<p>No se encontraron libros en el catálogo.</p>
+<p>Puedes <a href="{% url 'libro_crear' %}">crear el primer libro aquí</a>.</p>
+{% endif %} {% endblock %}
