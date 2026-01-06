@@ -1,3 +1,0 @@
-Django==5.2
-mysqlclient==2.2.7
-cryptography>= 42
