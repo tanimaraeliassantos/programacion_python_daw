@@ -37,7 +37,7 @@ Este proyecto es una API REST profesional desarrollada con **FastAPI** para la g
    ```bash
    cd fastapi-incidencias
    ```
-2. **CCrear y activar el entorno virtual:**
+2. **Crear y activar el entorno virtual:**
 
 ```bash
 python -m venv venv
@@ -79,19 +79,13 @@ La documentación Swagger en: http://localhost:8000/docs
 Credenciales de Prueba (JWT)
 Para probar los endpoints protegidos (POST), utiliza las siguientes credenciales en el endpoint /login:
 
-Usuario: admin
+- Usuario: admin
+- Password: Tanimaraes201619
 
-Password: Tanimaraes201619
-
-Estructura del Proyecto
-main.py: Punto de entrada y definición de rutas.
-
-db.py: Configuración de la conexión a MySQL.
-
-models.py: Definición de las tablas (SQLAlchemy).
-
-auth.py: Rutas de autenticación y login.
-
-security.py: Lógica de encriptado y generación de tokens.
-
-deps.py: Dependencias de seguridad para proteger rutas.
+**Estructura del Proyecto**
+**main.py:** Punto de entrada y definición de rutas.
+**db.py:** Configuración de la conexión a MySQL.
+**models.py:** Definición de las tablas (SQLAlchemy).
+**auth.py:** Rutas de autenticación y login.
+**security.py:** Lógica de encriptado y generación de tokens.
+**deps.py:** Dependencias de seguridad para proteger rutas.
