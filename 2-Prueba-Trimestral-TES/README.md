@@ -66,26 +66,32 @@ estado VARCHAR(20) NOT NULL
 );
 ```
 
-Ejecución
+## Ejecución
 Para arrancar el servidor de desarrollo:
 
 ```bash
 uvicorn main:app --reload
 ```
 
-La API estará disponible en: http://localhost:8000
-La documentación Swagger en: http://localhost:8000/docs
+- La API estará disponible en: http://localhost:8000
+- La documentación Swagger en: http://localhost:8000/docs
 
-Credenciales de Prueba (JWT)
+## Credenciales de Prueba (JWT)
 Para probar los endpoints protegidos (POST), utiliza las siguientes credenciales en el endpoint /login:
 
 - Usuario: admin
 - Password: Tanimaraes201619
 
-**Estructura del Proyecto**
+## Estructura del Proyecto
+
 **main.py:** Punto de entrada y definición de rutas.
+
 **db.py:** Configuración de la conexión a MySQL.
+
 **models.py:** Definición de las tablas (SQLAlchemy).
+
 **auth.py:** Rutas de autenticación y login.
+
 **security.py:** Lógica de encriptado y generación de tokens.
+
 **deps.py:** Dependencias de seguridad para proteger rutas.
