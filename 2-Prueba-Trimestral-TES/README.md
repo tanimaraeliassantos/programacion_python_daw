@@ -36,23 +36,25 @@ Este proyecto es una API REST profesional desarrollada con **FastAPI** para la g
 1. **Clonar el repositorio y entrar en la carpeta:**
    ```bash
    cd fastapi-incidencias
-   Crear y activar el entorno virtual:
    ```
+2. **CCrear y activar el entorno virtual:**
 
-Bash
+```bash
 python -m venv venv
-
 # En Windows:
-
 .\venv\Scripts\activate
-Instalar dependencias:
+```
 
-Bash
+3. **Instalar dependencias:**
+
+```bash
 pip install fastapi uvicorn sqlalchemy pymysql "python-jose[cryptography]" "passlib[bcrypt]" python-multipart
-Configurar la Base de Datos:
-Ejecutar el siguiente script SQL en tu gestor de MySQL:
+```
 
-SQL
+4. **Configurar la Base de Datos:**
+   Ejecutar el siguiente script SQL en tu gestor de MySQL:
+
+```SQL
 CREATE DATABASE IF NOT EXISTS fastapi_incidentes;
 USE fastapi_incidentes;
 CREATE TABLE incidencias (
@@ -62,12 +64,15 @@ descripcion TEXT NOT NULL,
 prioridad VARCHAR(20) NOT NULL,
 estado VARCHAR(20) NOT NULL
 );
+```
 
 Ejecución
 Para arrancar el servidor de desarrollo:
 
-Bash
+```bash
 uvicorn main:app --reload
+```
+
 La API estará disponible en: http://localhost:8000
 La documentación Swagger en: http://localhost:8000/docs
 
